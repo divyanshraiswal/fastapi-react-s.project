@@ -1,5 +1,39 @@
 # fastapi-react-s.project
 
+## Fruit Management App
+
+## Overview
+This project consists of a **Full-Stack Web Application** that allows users to manage a list of fruits. It uses **FastAPI** for the backend and **React** for the frontend.
+
+## Backend (FastAPI)
+- The backend is built using **FastAPI**, a modern and fast web framework for Python.
+- It exposes two API endpoints:
+  - `GET /fruits`: Fetches a list of fruits stored in memory.
+  - `POST /fruits`: Adds a new fruit to the memory database.
+- **CORS (Cross-Origin Resource Sharing)** is configured to allow requests from a specified origin (`http://localhost:3000`), enabling communication between the frontend (running on a different port) and the backend.
+- The backend is run with **Uvicorn**, a high-performance ASGI server.
+
+## Frontend (React)
+- The frontend is built using **React**, a popular JavaScript library for building user interfaces.
+- It includes the following components:
+  - **FruitList**: Displays a list of fruits and interacts with the backend API to fetch and add fruits.
+  - **AddFruitForm**: A form for submitting new fruits to the backend.
+- **Axios** is used to make HTTP requests to the FastAPI backend to fetch and add fruits.
+- The application is structured to include an `App` component that renders the fruit list and the form to add fruits.
+
+## Project Workflow
+1. The user interacts with the **React frontend**, adding a fruit name through the **AddFruitForm** component.
+2. The form sends a `POST` request to the backend, which updates the list of fruits stored in memory.
+3. The **FruitList** component periodically fetches the updated list of fruits from the backend using a `GET` request.
+4. The list of fruits is displayed, and the user can add more fruits.
+
+## Setup Instructions
+
+### Backend Setup
+1. Create a `backend` directory and navigate to it:
+   ```bash
+   mkdir backend
+   cd backend
 
 
 ### Dependencies
